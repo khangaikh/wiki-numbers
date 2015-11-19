@@ -20,7 +20,7 @@
     $twig->setCache(false);
 
     $template = $twig->loadTemplate('home.html');
-    echo $template->render(array('title' => 'Home'));
+    echo $template->render(array('title' => 'Home1'));
 
 ?>
     
