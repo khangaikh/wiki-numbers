@@ -1,21 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <title>WikiNumbers</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block header %}
-    	<!-- Google fonts - which you want to use - (rest you can just remove) -->
-	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	    <link rel="stylesheet" href="css/bootstrap.min.css">
 	    <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -26,17 +15,6 @@
 	    <link rel="stylesheet" href="css/responsive.css">
 	{% endblock %}
 </head>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#login").click(function(){
-        $("#LoginModal").modal('show');
-    });
-        $("#register").click(function(){
-        $("#RegModal").modal('show');
-    });
-    });
-</script>
-
 
 <body id="top">
     <!--[if lt IE 7]>
@@ -54,15 +32,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                     <!-- LOGO -->
                     <a class="navbar-brand page-scroll" href="#page-top">
                         <img src="img/logo.png" alt="">
                     </a>
                     <!-- END LOGO -->
-
                 </div>
-
                 <!-- TOGGLE NAV -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
@@ -80,120 +55,102 @@
                     </ul>
                 </div>
                 <!-- TOGGLE NAV -->
-
             </div>
             <!-- /.container -->
         </nav>
         <!-- END NAVIGATION -->
     </header>
-
-
     <!-- Modal Login-->
-    <form class="form-horizontal" action='' method="POST">
+    <form id ="login" class="form-horizontal" action='' method="POST">
+	    <div id="LoginModal" class="modal fade" role="dialog">
+	      <div class="modal-dialog">
+	            
+	            <!-- Modal content-->
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button class="close" data-dismiss="modal">&times;</button>
+	                    <h4 class="modal-title">Log In</h4>                  
+	                </div>
 
-    <div id="LoginModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-            
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Log In</h4>                  
-                </div>
+	                        <div class="control-group">
+	                          <!-- Username -->
+	                          <label class="control-label"  for="username">Username</label>
+	                          <div class="controls">
+	                            <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+	                           
+	                          </div>
+	                        </div>
+	                     
+	                        <div class="control-group">
+	                          <!-- Password-->
+	                          <label class="control-label" for="password">Password</label>
+	                          <div class="controls">
+	                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+	                          
+	                          </div>
+	                        </div>
 
-                        <div class="control-group">
-                          <!-- Username -->
-                          <label class="control-label"  for="username">Username</label>
-                          <div class="controls">
-                            <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
-                           
-                          </div>
-                        </div>
-                     
-                        <div class="control-group">
-                          <!-- Password-->
-                          <label class="control-label" for="password">Password</label>
-                          <div class="controls">
-                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-                          
-                          </div>
-                        </div>
-
-                        <div class="control-group">
-                          <!-- Button -->
-                          <div class="controls">
-                            <button class="btn btn-info" name="login">Login</button>
-                          </div>
-                        </div>
-            </div>
-      </div>
-    </div>
+	                        <div class="control-group">
+	                          <!-- Button -->
+	                          <div class="controls">
+	                            <button class="btn btn-info" name="login">Login</button>
+	                          </div>
+	                        </div>
+	            </div>
+	      </div>
+	    </div>
     </form>
-
     <!-- Modal Register-->
-    <form class="form-horizontal" action='' method="POST">
-
-    <div id="RegModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-            
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Register</h4>                  
-                </div>
-
-                        <div class="control-group">
-                          <!-- Username -->
-                          <label class="control-label"  for="username">Username</label>
-                          <div class="controls">
-                            <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
-                           
-                          </div>
-                        </div>
-                     
-                        <div class="control-group">
-                          <!-- Password-->
-                          <label class="control-label" for="password">Password</label>
-                          <div class="controls">
-                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-                          
-                          </div>
-                        </div>
-                     
-                        <div class="control-group">
-                          <!-- Password -->
-                          <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-                          <div class="controls">
-                            <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-                          
-                          </div>
-                        </div>
-                        
-                        <div class="control-group">
-                          <!-- E-mail -->
-                          <label class="control-label" for="email">E-mail address:</label>
-                          <div class="controls">
-                            <input type="text" id="email" name="email" placeholder="Your email addresss" class="input-xlarge">
-                            
-                          </div>
-                        </div>
-
-                        <div class="control-group">
-                          <!-- Button -->
-                          <div class="controls">
-                            <button class="btn btn-info">Register</button>
-                          </div>
-                        </div>
-            </div>
-      </div>
-    </div>
+    <form id="register" class="form-horizontal" action='controllers/user.php' method="POST">
+   		<div id="RegModal" class="modal fade" role="dialog">
+	      <div class="modal-dialog">
+	            <!-- Modal content-->
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button class="close" data-dismiss="modal">&times;</button>
+	                    <h4 class="modal-title">Register</h4>                  
+	                </div>
+                    <div class="control-group">
+                      <!-- Username -->
+                      <label class="control-label"  for="username">Username</label>
+                      <div class="controls">
+                        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <!-- Password-->
+                      <label class="control-label" for="password">Password</label>
+                      <div class="controls">
+                        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <!-- Password -->
+                      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+                      <div class="controls">
+                        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">                          
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <!-- E-mail -->
+                      <label class="control-label" for="email">E-mail address:</label>
+                      <div class="controls">
+                        <input type="text" id="email" name="email" placeholder="Your email addresss" class="input-xlarge">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <!-- Button -->
+                      <div class="controls">
+                      	<button class="btn btn-info">Register</button>
+                      </div>
+                    </div>
+	            </div>
+	      </div>
+    	</div>
     </form>
-
     {% block content %}
-
+    	<!--Main subpage contents go here-->
     {% endblock %}
-    
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -233,15 +190,6 @@
     <!-- END FOOTER -->
    
     {% block footer %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-58035815-1', 'auto');
-      ga('send', 'pageview');
-    </script>
     <!-- js files -->
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
     <script src="js/plugins.js"></script>
@@ -250,6 +198,16 @@
     <script src="js/prettyPhoto.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.x`js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+        	$("#login").click(function(){
+        		$("#LoginModal").modal('show');
+    		});
+        	$("#register").click(function(){
+        		$("#RegModal").modal('show');
+    		});
+    	});
+	</script>
     {% endblock%}
 </body>
