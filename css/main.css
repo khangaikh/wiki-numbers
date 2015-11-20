@@ -372,3 +372,15 @@ footer {
     color: #34495E;
     font-size: 14px;
 }
+ #RegModal {
+    margin-left: 300px;
+ }
+.control-group {
+  margin: 15px;
+}
+.control-group input{
+    width: 300px;
+}
+.modal-dialog {
+    width: 500px;
+}

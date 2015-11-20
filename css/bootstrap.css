@@ -1453,7 +1453,12 @@ input[type="radio"][readonly],
 input[type="checkbox"][readonly] {
   background-color: transparent;
 }
-
+.custom {
+  margin-left: 100px;
+} 
+.control-group {
+  padding: 20px;
+}
 .control-group.warning .control-label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
@@ -1969,8 +1974,9 @@ legend + .control-group {
 .form-horizontal .controls {
   *display: inline-block;
   *padding-left: 20px;
-  margin-left: 180px;
+  margin-right: 80px;
   *margin-left: 0;
+  margin-top: 20px;
 }
 
 .form-horizontal .controls:first-child {
